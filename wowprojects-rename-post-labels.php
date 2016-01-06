@@ -44,7 +44,12 @@ function wds_RenamePostLabels() {
 		$data['not_found'] = sanitize_text_field( $_POST['not_found'] );
 		$data['not_found_in_trash'] = sanitize_text_field( $_POST['not_found_in_trash'] );
 		$data['menu_icon'] = sanitize_text_field( $_POST['menu_icon']);
+
 		update_option('RenamePostLabels', $data);
+
+		echo '<h2>Labels changed successfully</h2>';
+		echo("<meta http-equiv='refresh' content='0'>");
+
 	}
 	else {
 		$data =  get_option('RenamePostLabels');
