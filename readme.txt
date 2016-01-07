@@ -46,7 +46,14 @@ Installing "Rename Post Labels by WOWDevshop" can be done either by searching fo
 
 We encourage everyone to contribute their ideas, thoughts and code snippets. This can be done by forking the [repository over at GitHub](https://github.com/wowdevshop/wp-rename-post-labels).
 
+== Screenshots ==
+
+1. The Rename Post Labels menu settings screen within the WordPress admin.
+
+2. Rename Post labels options on the settings menu.
+
 == Changelog ==
+
 No changelogs yet
 
 == Upgrade Notice ==
