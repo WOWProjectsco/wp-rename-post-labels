@@ -68,7 +68,7 @@
 			</tr>
 			<tr>
 				<td><label> <?php _e('Custom Icon') ?> </label></td>
-				<td><input type="text" size="25" name="menu_icon" value="<?php echo $menu_icon ?>" maxlength="50" /> </td>
+				<td><input type="text" size="30" name="menu_icon" value="<?php echo $menu_icon ?>" maxlength="50" /> </td>
 				<td> *Check the available dashicons <a target="_blank" href="https://developer.wordpress.org/resource/dashicons">here</a>. </td>
 			</tr>
 			<table>
