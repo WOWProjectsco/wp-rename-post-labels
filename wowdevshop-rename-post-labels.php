@@ -5,7 +5,7 @@
 * Plugin URI: http://wowdevshop.com
 * Description: This plugin let's you change the default labels of the post type and customize the icon.
 * Author: XicoOfficial
-* Version: 1.0.0
+* Version: 1.1.0
 * License: GPLv2
 * Author URI: http://wowdevshop.com
 * Text Domain: rename-post-labels-by-wowdevshop
@@ -27,7 +27,10 @@ add_action( 'init', 'wds_change_post_labels' );
 
 // Callback funtion that register the new subpage
 function wds_register_subpage() {
-	add_options_page( __('Rename Post Labels', 'RenamePostLabels'), __('Rename Post Labels', 'RenamePostLabels'), 'administrator', 'rename-post-labels', 'wds_RenamePostLabels');
+	add_options_page(
+		__('Rename Post Labels', 'rename-post-labels-by-wowdevshop'),
+		__('Rename Post Labels', 'rename-post-labels-by-wowdevshop'),
+		'administrator', 'rename-post-labels', 'wds_RenamePostLabels');
 }
 
 
@@ -55,18 +58,18 @@ function wds_RenamePostLabels() {
 		$data =  get_option('RenamePostLabels');
 	}
 
-	$name = (isset($data['name']))? esc_html($data['name']) : __('Posts', 'RenamePostLabels');
-	$singular_name = (isset($data['singular_name']))? esc_html($data['singular_name']) : __('Post', 'RenamePostLabels') ;
-	$add_new = (isset($data['add_new']))? esc_html($data['add_new']) : __('Add New', 'RenamePostLabels');
-	$add_new_item = (isset($data['add_new_item']))? esc_html($data['add_new_item']) : __('Add New Post', 'RenamePostLabels');
-	$edit_item = (isset($data['edit_item']))? esc_html($data['edit_item']) : __('Edit Post', 'RenamePostLabels');
-	$new_item = (isset($data['new_item']))? esc_html($data['new_item']) : __('New Post', 'RenamePostLabels');
-	$view_item = (isset($data['view_item']))? esc_html($data['view_item']) : __('View Post', 'RenamePostLabels');
-	$search_items = (isset($data['search_items']))? esc_html($data['search_items']) : __('Search Posts', 'RenamePostLabels');
-	$not_found = (isset($data['not_found']))? esc_html($data['not_found']) : __('No posts found', 'RenamePostLabels');
-	$not_found_in_trash = (isset($data['not_found_in_trash']))? esc_html($data['not_found_in_trash']) : __('No posts found in Trash', 'RenamePostLabels');
+	$name = (isset($data['name']))? esc_html($data['name']) : __('Posts', 'rename-post-labels-by-wowdevshop');
+	$singular_name = (isset($data['singular_name']))? esc_html($data['singular_name']) : __('Post', 'rename-post-labels-by-wowdevshop') ;
+	$add_new = (isset($data['add_new']))? esc_html($data['add_new']) : __('Add New', 'rename-post-labels-by-wowdevshop');
+	$add_new_item = (isset($data['add_new_item']))? esc_html($data['add_new_item']) : __('Add New Post', 'rename-post-labels-by-wowdevshop');
+	$edit_item = (isset($data['edit_item']))? esc_html($data['edit_item']) : __('Edit Post', 'rename-post-labels-by-wowdevshop');
+	$new_item = (isset($data['new_item']))? esc_html($data['new_item']) : __('New Post', 'rename-post-labels-by-wowdevshop');
+	$view_item = (isset($data['view_item']))? esc_html($data['view_item']) : __('View Post', 'rename-post-labels-by-wowdevshop');
+	$search_items = (isset($data['search_items']))? esc_html($data['search_items']) : __('Search Posts', 'rename-post-labels-by-wowdevshop');
+	$not_found = (isset($data['not_found']))? esc_html($data['not_found']) : __('No posts found', 'rename-post-labels-by-wowdevshop');
+	$not_found_in_trash = (isset($data['not_found_in_trash']))? esc_html($data['not_found_in_trash']) : __('No posts found in Trash', 'rename-post-labels-by-wowdevshop');
 
-	$menu_icon = (isset($data['menu_icon']))? esc_html($data['menu_icon']) : __('dashicons-admin-post', 'RenamePostLabels');
+	$menu_icon = (isset($data['menu_icon']))? esc_html($data['menu_icon']) : __('dashicons-admin-post', 'rename-post-labels-by-wowdevshop');
 
 	// Call the menu settings template
 	include( 'includes/menu-settings.php' );
@@ -84,7 +87,7 @@ function wds_change_admin_menu_labels() {
 			$menu[5][0] = $data['name'];
 			$submenu['edit.php'][5][0] = $data['name'];
 			$submenu['edit.php'][10][0] = $data['add_new'];
-			$submenu['edit.php'][16][0] = __('Tags');
+			$submenu['edit.php'][16][0] = __('Tags', 'rename-post-labels-by-wowdevshop');
 			echo '';
 		}
 	}
