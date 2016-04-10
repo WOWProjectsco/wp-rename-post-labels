@@ -5,7 +5,7 @@
 * Plugin URI: http://wowdevshop.com
 * Description: This plugin let's you change the default labels of the post type and customize the icon.
 * Author: XicoOfficial
-* Version: 1.1.0
+* Version: 1.1.1
 * License: GPLv2
 * Author URI: http://wowdevshop.com
 * Text Domain: rename-post-labels-by-wowdevshop
@@ -15,6 +15,17 @@
 * @author XicoOfficial
 * @since 1.0.0
 */
+
+/**
+ * Tell WordPress to load a translation file if it exists for the user's language
+ * @since 1.2.0
+ */
+function wds_our_programs_load_plugin_textdomain() {
+    load_plugin_textdomain( 'rename-post-labels-by-wowdevshop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+
+add_action( 'plugins_loaded', 'wds_our_programs_load_plugin_textdomain' );
+
 
 // Register Subpage menu on settings
 add_action( 'admin_menu', 'wds_register_subpage' );
