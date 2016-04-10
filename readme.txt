@@ -4,7 +4,7 @@ Donate link: http://wowdevshop.com/
 Tags: post, rename post label, rename label, post labels
 Requires at least: 3.0.1
 Tested up to: 4.5
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,11 +54,17 @@ We encourage everyone to contribute their ideas, thoughts and code snippets. Thi
 
 == Changelog ==
 
+= 1.1.1 =
+* Add function to load text domain translations
+
 = 1.1.0 =
 * Plugin internationalized
 * Ready for 4.5
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+* Add function for translations
 
 = 1.1.0 =
 * Ready for intenationalization

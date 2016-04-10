@@ -5,7 +5,7 @@
 * Plugin URI: http://wowdevshop.com
 * Description: This plugin let's you change the default labels of the post type and customize the icon.
 * Author: XicoOfficial
-* Version: 1.1.0
+* Version: 1.1.1
 * License: GPLv2
 * Author URI: http://wowdevshop.com
 * Text Domain: rename-post-labels-by-wowdevshop
