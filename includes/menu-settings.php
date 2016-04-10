@@ -1,3 +1,16 @@
+
+<?php
+/**
+* Template for the for on the WordPress Dashboard
+*
+* @package WordPress
+* @subpackage WowDevShop_Rename_Post_Labels
+* @author XicoOfficial
+* @since 1.0.0
+*/
+
+?>
+
 <div class="wrap">
             <?php screen_icon('edit-pages'); ?>
 			<h2><?php _e('Rename Post Labels', 'RenamePostLabels') ?></h2>
