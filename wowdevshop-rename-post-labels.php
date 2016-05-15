@@ -20,32 +20,32 @@
  * Tell WordPress to load a translation file if it exists for the user's language
  * @since 1.2.0
  */
-function wds_our_programs_load_plugin_textdomain() {
+function wds_rps_load_plugin_textdomain() {
     load_plugin_textdomain( 'rename-post-labels-by-wowdevshop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 
-add_action( 'plugins_loaded', 'wds_our_programs_load_plugin_textdomain' );
+add_action( 'plugins_loaded', 'wds_rps_load_plugin_textdomain' );
 
 
 // Register Subpage menu on settings
-add_action( 'admin_menu', 'wds_register_subpage' );
+add_action( 'admin_menu', 'wds_rps_register_subpage' );
 
 // Change menu labels
-add_action( 'admin_menu', 'wds_change_admin_menu_labels' );
+add_action( 'admin_menu', 'wds_rps_change_admin_menu_labels' );
 
 // Change post labels
-add_action( 'init', 'wds_change_post_labels' );
+add_action( 'init', 'wds_rps_change_post_labels' );
 
 // Callback funtion that register the new subpage
-function wds_register_subpage() {
+function wds_rps_register_subpage() {
 	add_options_page(
 		__('Rename Post Labels', 'rename-post-labels-by-wowdevshop'),
 		__('Rename Post Labels', 'rename-post-labels-by-wowdevshop'),
-		'administrator', 'rename-post-labels', 'wds_RenamePostLabels');
+		'administrator', 'rename-post-labels', 'wds_rps_RenamePostLabels');
 }
 
 
-function wds_RenamePostLabels() {
+function wds_rps_RenamePostLabels() {
 	if(isset($_POST['name']) && ($_POST['name']) ) {
 		$data['name'] = sanitize_text_field( $_POST['name'] );
 		$data['singular_name'] = sanitize_text_field( $_POST['singular_name'] );
@@ -89,7 +89,7 @@ function wds_RenamePostLabels() {
 
 
 // Callback funtion that changes the admin menu labels
-function wds_change_admin_menu_labels() {
+function wds_rps_change_admin_menu_labels() {
     global $menu;
     global $submenu;
 	$data =  get_option('RenamePostLabels');
@@ -105,7 +105,7 @@ function wds_change_admin_menu_labels() {
 }
 
 // Callback funtion that changes the label to the new ones
-function wds_change_post_labels() {
+function wds_rps_change_post_labels() {
 	global $wp_post_types;
 
 	$labels = &$wp_post_types['post']->labels;
