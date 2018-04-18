@@ -12,7 +12,6 @@
 ?>
 
 <div class="wrap">
-            <?php screen_icon('edit-pages'); ?>
 			<h2><?php _e('Rename Post Labels', 'rename-post-labels-by-wowdevshop') ?></h2>
             <h4><?php _e('Customize your icon and change the default Post labels.', 'rename-post-labels-by-wowdevshop') ?></h4>
             <form method="post" action="">

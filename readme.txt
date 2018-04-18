@@ -3,8 +3,8 @@ Contributors: XicoOfficial, wowdevshop
 Donate link: http://wowdevshop.com/
 Tags: post, rename post label, rename label, post labels
 Requires at least: 3.0.1
-Tested up to: 4.6
-Stable tag: 1.1.2
+Tested up to: 4.9
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,10 @@ We encourage everyone to contribute their ideas, thoughts and code snippets. Thi
 2. Rename Post labels options on the settings menu.
 
 == Changelog ==
+
+= 1.1.3 =
+* Tested compatibility with WordPress 4.9
+* Remove deprecated function screen_icon();
 
 = 1.1.2 =
 * Tested compatibility with WordPress 4.6
